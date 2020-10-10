@@ -53,7 +53,7 @@ class AhoCorasick:
                 if child.fail_node is None:
                     child.fail_node = self.root
 
-    def word_exists(self, word):
+    def find_words_in(self, word):
         if word == "":
             return True
 
@@ -93,5 +93,5 @@ if __name__ == "__main__":
         trie.add_word(word)
     trie.build_fail_links()
 
-    print(trie.word_exists("bcaab"))
-    # print(trie.word_exists("ahishers"))
+    print(trie.find_words_in("bcaab"))
+    # print(trie.find_words_in("ahishers"))
